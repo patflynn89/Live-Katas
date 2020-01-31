@@ -1,0 +1,25 @@
+public class DnaStrand {
+  public static String makeComplement(String dna) {
+    char[] complement = dna.toCharArray();
+    for (int i = 0; i < complement.length; i++) {
+      switch (complement[i]) {
+        case 'A':
+          complement[i] = 'T';
+          break;
+        case 'C':
+          complement[i] = 'G';
+          break;
+        case 'T':
+          complement[i] = 'A';
+          break;
+        case 'G':
+          complement[i] = 'C';
+          break;
+        default:
+          System.out.println("Invalid Character!");
+      }
+    }
+    String stringComplement = String.valueOf(complement);
+    return stringComplement;
+  }
+}
